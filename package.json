@@ -1,0 +1,17 @@
+{
+  "name": "yt-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "dev": "nodemon main.js"
+  },
+  "keywords": [
+    "youtube"
+  ],
+  "author": "dethz",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
