@@ -1,17 +1,21 @@
 let exp = require('express')
+let cors = require('cors')
+
+let setup = require('./script/setup')
+let config = require('./script/config')
+let yt = require('./script/yt')
+
 let app = exp()
-let port = 1980
+
+let cSetting = {
+  origin: '*',
+  optionsSuccessStatus: 200
+}
 
 app.get('/', (req, res) => {
-  res.send('Setting Setup Success')
+  res.send('<center>summonizing success</center>')
 })
 
-app.listen(port, () => {
-  console.log('|====================================================|');
-  console.log('|                                                    |');
-  console.log('|                                                    |');
-  console.log(`|      App starting up @ https://localhost:${port}      |`);
-  console.log('|                                                    |');
-  console.log('|                                                    |');
-  console.log('|====================================================|');
-})
+app.get('/api', cors(cSetting), yt.apiV1)
+
+app.listen(config.port, () => setup.portLOG())
