@@ -12,6 +12,11 @@ function apiV1(req, res) {
   }
 }
 
+function apiV2(req, res) {
+  res.send('<center><h1>a</h1></center>')
+}
+
 module.exports = {
-  apiV1
+  apiV1,
+  apiV2
 }

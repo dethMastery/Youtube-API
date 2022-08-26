@@ -7,15 +7,11 @@ let yt = require('./script/yt')
 
 let app = exp()
 
-let cSetting = {
-  origin: '*',
-  optionsSuccessStatus: 200
-}
-
 app.get('/', (req, res) => {
   res.send('<center>summonizing success</center>')
 })
 
-app.get('/api', cors(cSetting), yt.apiV1)
+app.get('/api', cors(config.cSetting), yt.apiV1)
+app.get('/apiV2', cors(config.cSetting), yt.apiV2)
 
 app.listen(config.port, () => setup.portLOG())
