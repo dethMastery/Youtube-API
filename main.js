@@ -11,8 +11,8 @@ app.get('/', (req, res) => {
   res.send('<center>summonizing success</center>')
 })
 
-app.get('/api', cors(config.cSetting), yt.apiV1)
-app.get('/apiV2', cors(config.cSetting), yt.apiV2)
-app.get('/apiV2/full', cors(config.cSetting), yt.V2backend)
+app.get('/apiV1', cors(config.cSetting), yt.apiV1)
+app.get('/api', cors(config.cSetting), yt.apiV2)
+app.get('/api/full', cors(config.cSetting), yt.V2backend)
 
 app.listen(config.port, () => setup.portLOG())
