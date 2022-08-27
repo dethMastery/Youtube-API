@@ -13,5 +13,6 @@ app.get('/', (req, res) => {
 
 app.get('/api', cors(config.cSetting), yt.apiV1)
 app.get('/apiV2', cors(config.cSetting), yt.apiV2)
+app.get('/apiV2/full', cors(config.cSetting), yt.V2backend)
 
 app.listen(config.port, () => setup.portLOG())
