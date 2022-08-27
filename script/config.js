@@ -5,11 +5,6 @@ let cSetting = {
   optionsSuccessStatus: 200
 }
 
-let noCORS = {
-  origin: '',
-  optionoptionsSuccessStatus: 200
-}
-
 module.exports = {
   port,
   cSetting

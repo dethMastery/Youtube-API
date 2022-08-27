@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
   res.send('<center>summonizing success</center>')
 })
 
-app.get('/apiV1', cors(config.cSetting), yt.apiV1)
+// app.get('/apiV1', cors(config.cSetting), yt.apiV1)
 app.get('/api', cors(config.cSetting), yt.apiV2)
 app.get('/api/full', cors(config.cSetting), yt.V2backend)
 
